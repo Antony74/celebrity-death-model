@@ -22,11 +22,11 @@ i.e. for any given number of celebrity deaths, x
 
 This gives us a single parameter λ for our model to estimate.
 
-In model.r is a simple Bayesian model of this Poisson process, implemented in the R (R Core Team 2016) and JAGS (Plummer 2016) programming languages.  This uses a Markov Chain Monte Carlo (MCMC) method to derive a spread of likely values for the Poisson parameter λ.
+In [model.r](./model.r) is a simple Bayesian model of this Poisson process, implemented in the R (R Core Team 2016) and JAGS (Plummer 2016) programming languages.  This uses a Markov Chain Monte Carlo (MCMC) method to derive a spread of likely values for the Poisson parameter λ.
 
 ![Lambda](https://raw.githubusercontent.com/Antony74/celebrity-death-model/master/images/lambda.png?token=ABgRdw3WYBGIdVeJqbGprldn1HsG0Emoks5XokXPwA%3D%3D "Lambda")
 
-Results can also be calculated via the grid method: in GridMethod.r we sample λ from 0.1 to 50 in intervals of 0.1, a sample size of only 500.  The simplicity of the model, the ease with which results can be checked, and the very small amount of data involved make this model an ideal learning opportunity.  Note that it doesn't take many extra parameters to put a model beyond the grid method.  See Kruschke (2012) for an excellent example of a still very simple five parameter model.  If we wanted to compare five parameters across 500 different values each the sample size would be 500^5 = 31250000000000 = 3.125*10^13.  Hence MCMC methods are usually essential in Bayesian analysis.
+Results can also be calculated via the grid method: in [GridMethod.r](./GridMethod.r) we sample λ from 0.1 to 50 in intervals of 0.1, a sample size of only 500.  The simplicity of the model, the ease with which results can be checked, and the very small amount of data involved make this model an ideal learning opportunity.  Note that it doesn't take many extra parameters to put a model beyond the grid method.  See Kruschke (2012) for an excellent example of a still very simple five parameter model.  If we wanted to compare five parameters across 500 different values each the sample size would be 500^5 = 31250000000000 = 3.125*10^13.  Hence MCMC methods are usually essential in Bayesian analysis.
 
 Now we look at the distribution of celebrity deaths implied by these values of  λ.
 
