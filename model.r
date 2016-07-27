@@ -2,8 +2,6 @@
 source("DBDA2E-utilities.R");
 require(rjags);
 
-fileNameRoot="model" # For output file names.
-
 # Load the data:
 myData = read.csv("data.csv");
 y = myData$y;
