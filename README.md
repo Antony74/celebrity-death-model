@@ -1,21 +1,16 @@
-﻿There is a pop-culture theory that there have been an unusually large number of celebrity deaths in 2016.  Malley (2016) used Wikipedia data to try to make an objective judgement about this, and found that, at least for persons linked to by at least 500 Wikipedia articles, there do indeed seem to have been more celebrity deaths in the first 121 days of 2016 than in the first 121 days of the forgoing years.
+#Celebrity Death Model
 
-Year
-Deaths of notable persons linked to by at least 500 Wikipedia pages, in the first 121 days of the year.
-2010
-23
-2011
-16
-2012
-12
-2013
-25
-2014
-30
-2015
-30
-2016
-34
+There is a pop-culture theory that there have been an unusually large number of celebrity deaths in 2016.  Malley (2016) used Wikipedia data to try to make an objective judgement about this, and found that, at least for persons linked to by at least 500 Wikipedia articles, there do indeed seem to have been more celebrity deaths in the first 121 days of 2016 than in the first 121 days of the forgoing years.
+
+|Year|Deaths of notable persons linked to by at least 500 Wikipedia pages, in the first 121 days of the year.|
+|----|--|
+|2010|23|
+|2011|16|
+|2012|12|
+|2013|25|
+|2014|30|
+|2015|30|
+|2016|34|
 
 Here we show this number (34 deaths in 2016) is statistical significant.
 
@@ -23,22 +18,25 @@ A suitable null hypothesis is that celebrity deaths are random, rare, and memory
 
 i.e. for any given number of celebrity deaths, x
 
-P(X=x) = e-λ λx /x!
+![Poisson equation](https://github.com/Antony74/celebrity-death-model/raw/master/images/PoissonEquation.png "Poisson equation")
 
 This gives us a single parameter λ for our model to estimate.
 
 In model.r is a simple Bayesian model of this Poisson process, implemented in the R (R Core Team 2016) and JAGS (Plummer 2016) programming languages.  This uses a Markov Chain Monte Carlo (MCMC) method to derive a spread of likely values for the Poisson parameter λ.
 
+![Lambda](https://raw.githubusercontent.com/Antony74/celebrity-death-model/master/images/lambda.png?token=ABgRdw3WYBGIdVeJqbGprldn1HsG0Emoks5XokXPwA%3D%3D "Lambda")
 
 Results can also be calculated via the grid method: in GridMethod.r we sample λ from 0.1 to 50 in intervals of 0.1, a sample size of only 500.  The simplicity of the model, the ease with which results can be checked, and the very small amount of data involved make this model an ideal learning opportunity.  Note that it doesn't take many extra parameters to put a model beyond the grid method.  See Kruschke (2012) for an excellent example of a still very simple five parameter model.  If we wanted to compare five parameters across 500 different values each the sample size would be 500^5 = 31250000000000 = 3.125*10^13.  Hence MCMC methods are usually essential in Bayesian analysis.
 
 Now we look at the distribution of celebrity deaths implied by these values of  λ.
 
-The cumulative probability of less than 34 deaths is 97%, thus there is less than a 5% chance in this model of the 34 deaths observed in 2016 (or more) occurring.  Thus it is traditional to reject the null hypothesis and assume there must be some underlying trend or weak connection between celebrity deaths.    Huges and Gray (2016) speculate about what the causes of this may be.
+![Posterior predictive](https://raw.githubusercontent.com/Antony74/celebrity-death-model/master/images/PosteriorPredictive.png?token=ABgRd2mLl-c7hXGqNP1UaBsfbV3Jz-Kmks5XokYiwA%3D%3D "Posterior predictive")
+
+The cumulative probability of less than 34 deaths is 97%, so there is less than a 5% chance in this model of the 34 deaths observed in 2016 (or more) occurring.  Thus it is traditional to reject the null hypothesis and assume there must be some underlying trend or weak connection between celebrity deaths.    Huges and Gray (2016) speculate about what the causes of this may be.
 
 However, we should be concerned that Malley (2016) didn't find the same trend when including the deaths of notable persons with less than 500 linked Wikipedia pages.
 
-References:
+##References:
 
   DeJardine, Zachary Viljo Calvin (2013). Poisson Processes and Applications in Hockey. https://www.lakeheadu.ca/sites/default/files/uploads/77/docs/DejardineFinal.pdf retrieved 27th July 2016
 
