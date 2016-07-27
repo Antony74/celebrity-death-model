@@ -1,6 +1,6 @@
 #Celebrity Death Model
 
-There is a pop-culture theory that there have been an unusually large number of celebrity deaths in 2016.  Malley (2016) used Wikipedia data to try to make an objective judgement about this, and found that, at least for persons linked to by at least 500 Wikipedia articles, there do indeed seem to have been more celebrity deaths in the first 121 days of 2016 than in the first 121 days of the forgoing years.
+There is a pop-culture theory that there have been an unusually large number of celebrity deaths in 2016.  Malley (2016) used Wikipedia data to try to make an objective judgement about this, and found that, for persons linked to by at least 500 Wikipedia articles, there do indeed seem to have been more celebrity deaths in the first 121 days of 2016 than in the first 121 days of the forgoing years.
 
 | Year | Deaths |
 | ---- |:------:|
