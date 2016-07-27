@@ -2,15 +2,15 @@
 
 There is a pop-culture theory that there have been an unusually large number of celebrity deaths in 2016.  Malley (2016) used Wikipedia data to try to make an objective judgement about this, and found that, at least for persons linked to by at least 500 Wikipedia articles, there do indeed seem to have been more celebrity deaths in the first 121 days of 2016 than in the first 121 days of the forgoing years.
 
-|Year|Deaths of notable persons linked to by at least 500 Wikipedia pages, in the first 121 days of the year.|
-|----|--|
-|2010|23|
-|2011|16|
-|2012|12|
-|2013|25|
-|2014|30|
-|2015|30|
-|2016|34|
+| Year | Deaths |
+| ---- |:------:|
+| 2010 | 23 |
+| 2011 | 16 |
+| 2012 | 12 |
+| 2013 | 25 |
+| 2014 | 30 |
+| 2015 | 30 |
+| 2016 | 34 |
 
 Here we show this number (34 deaths in 2016) is statistical significant.
 
