@@ -1,4 +1,12 @@
 
+# This modelling script is derived from resource mentioned in the banner
+# immediately below: ...however, any mistakes are mine alone! 
+
+# Jags-ExampleScript.R 
+# Accompanies the book:
+#   Kruschke, J. K. (2014). Doing Bayesian Data Analysis: 
+#   A Tutorial with R, JAGS, and Stan. 2nd Edition. Academic Press / Elsevier.
+
 source("DBDA2E-utilities.R");
 require(rjags);
 
@@ -84,7 +92,7 @@ arrP = sapply(x, function(nDeaths)
 arrCum = cumsum(arrP);
 
 par(default.par);
-plot(x, y=arrCum, xlab="Deaths", ylab="Cumlative probability");
+plot(x, y=arrP, xlab="Celebrity deaths", ylab="Probability");
 
 cat("P(deaths < 34) = ", arrCum[34], "\n");
 
