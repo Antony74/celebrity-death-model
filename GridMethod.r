@@ -1,9 +1,9 @@
 
 bayes = function(likelihood, prior)
 {
-	lp = likelihood * prior;
-	evidence = sum(lp);
-	return( lp/evidence );
+    lp = likelihood * prior;
+    evidence = sum(lp);
+    return( lp/evidence );
 };
 
 # Load the data:
@@ -20,11 +20,11 @@ plot(lambda, prior, main=0);
 
 for (n in 1:length(y))
 {
-	likelihood = dpois(y[n], lambda);
-	posterior = bayes(likelihood, prior);
-	prior = posterior;
+    likelihood = dpois(y[n], lambda);
+    posterior = bayes(likelihood, prior);
+    prior = posterior;
 
-	plot(lambda, prior, main=n);
+    plot(lambda, prior, main=n);
 }
 
 theMode = lambda[which.max(posterior)];
@@ -36,14 +36,14 @@ hdiThreshold = sorted[which.max(inHDI)];
 
 hdi = sapply(posterior, function(x)
 {
-	if(x >= hdiThreshold)
-	{
-		return(x);
-	}
-	else
-	{
-		return(NA);
-	}
+    if(x >= hdiThreshold)
+    {
+        return(x);
+    }
+    else
+    {
+        return(NA);
+    }
 });
 
 points(lambda, hdi, col="red");
