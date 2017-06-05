@@ -1,4 +1,4 @@
-#Celebrity Death Model
+# Celebrity Death Model
 
 There is a pop-culture theory that there have been an unusually large number of celebrity deaths in 2016.  Malley (2016) used Wikipedia data to try to make an objective judgement about this, and found that, for persons linked to by at least 500 Wikipedia articles, there do indeed seem to have been more celebrity deaths in the first 121 days of 2016 than in the first 121 days of the forgoing years.
 
@@ -36,7 +36,7 @@ The cumulative probability of less than 34 deaths is 97%, so there is less than 
 
 However, we should be concerned that Malley (2016) didn't find the same trend when including the deaths of notable persons with less than 500 linked Wikipedia pages.
 
-##References:
+## References:
 
   DeJardine, Zachary Viljo Calvin (2013). Poisson Processes and Applications in Hockey. https://www.lakeheadu.ca/sites/default/files/uploads/77/docs/DejardineFinal.pdf retrieved 27th July 2016
 
